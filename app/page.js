@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button"
 import Head from 'next/head';
 import Contect from './_components/Contect';
 import Link from 'next/link';
-import { FaGithub } from "react-icons/fa";
+import { FaGithub } from 'react-icons/fa';
 
 const page = () => {
   return (
