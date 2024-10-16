@@ -1,113 +1,126 @@
-import Image from "next/image";
+import React from 'react'
+import { Button } from "@/components/ui/button"
+import Head from 'next/head';
+import Contect from './_components/Contect';
+import Link from 'next/link';
+import { FaGithub } from "react-icons/fa";
 
-export default function Home() {
+const page = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    // <div className='p-10 flex flex-col items-center justify-center' >
+    //   <h1 className='red font-bold text-[22px]'>Welcome to AI Mock Interview</h1>
+    // <a  ><h1><Button>Start</Button></h1></a>
+    // </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    <div>
+      <Head>
+        <title>AI Mock Interview</title>
+        <meta name="description" content="Ace your next interview with AI-powered mock interviews" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <main className="min-h-screen">
+        {/* Header Section */}
+        <header className="w-full py-8 bg-gray-100 shadow-md">
+          <div className="container mx-auto flex flex-col md:flex-row justify-between items-center px-6">
+            <h1 className="text-3xl font-bold text-primary">AI Mock Interview</h1>
+            <nav className="mt-4 md:mt-0 flex items-center">
+              <div  >
+                <a target='_blanck' href={"https://github.com/modamaan/Ai-mock-Interview"} ><FaGithub className="w-10 h-8"  /></a>
+              </div>
+              <div><a href="#features" className="text-lg text-gray-800 mx-2 md:mx-4">Features</a>
+                <a href="#testimonials" className="text-lg text-gray-800 mx-2 md:mx-4">Testimonials</a>
+                <a href="#contact" className="text-lg text-gray-800 mx-2 md:mx-4">Contact</a></div>
+            </nav>
+          </div>
+        </header>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* Hero Section */}
+        <section className="flex flex-col items-center justify-center text-center py-20 bg-gradient-to-r from-gray-900 to-gray-400  px-6 md:px-0">
+          <h2 className="text-4xl md:text-5xl font-bold text-white">Ace Your Next Interview</h2>
+          <p className="mt-4 text-lg md:text-xl text-white ">Practice with AI-powered mock interviews and get personalized feedback</p>
+          <div className="mt-6 flex flex-col md:flex-row">
+            <a
+              href="/dashboard"
+              className="px-6 py-3 mb-4 md:mb-0 md:mr-4 text-lg font-semibold bg-white !text-primary-600 rounded-lg shadow-lg hover:bg-gray-100"
+            >
+              Get Started
+            </a>
+            <a
+              href="#features"
+              className="px-6 py-3 text-lg font-semibold border border-white rounded-lg hover:bg-white hover:text-black-600"
+            >
+              Learn More
+            </a>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+        {/* Features Section */}
+        <section id="features" className="py-16 bg-white px-6 md:px-0">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-800">Features</h2>
+            <p className="mt-4 text-lg text-gray-800">
+              Our AI Mock Interview platform offers a range of powerful features:
+            </p>
+            <div className="flex flex-wrap justify-center mt-8">
+              <div className="w-full md:w-1/3 px-4 py-8">
+                <div className="bg-blue-100 rounded-lg p-6 shadow-md">
+                  <h3 className="text-2xl font-semibold text-black-600">AI Mock Interviews</h3>
+                  <p className="mt-2 text-gray-600">Experience realistic interview scenarios with our advanced AI.</p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 px-4 py-8">
+                <div className="bg-blue-100 rounded-lg p-6 shadow-md">
+                  <h3 className="text-2xl font-semibold text-black-600">Instant Feedback</h3>
+                  <p className="mt-2 text-gray-600">Get instant, personalized feedback to improve your performance.</p>
+                </div>
+              </div>
+              <div className="w-full md:w-1/3 px-4 py-8">
+                <div className="bg-blue-100 rounded-lg p-6 shadow-md">
+                  <h3 className="text-2xl font-semibold text-black-600">Comprehensive Reports</h3>
+                  <p className="mt-2 text-gray-600">Receive detailed reports highlighting your strengths and weaknesses.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+        {/* Testimonials Section */}
+        <section id="testimonials" className="py-16 bg-gray-50 px-6 md:px-0">
+          <div className="container mx-auto text-center">
+            <h2 className="text-4xl font-bold text-gray-800">What Our Users Say</h2>
+            <div className="flex flex-wrap justify-center mt-8">
+              <div className="w-full md:w-1/2 px-4 py-8">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <p className="text-gray-600">
+                    "The AI mock interviews were incredibly helpful. I felt much more confident going into my real interview."
+                  </p>
+                  <h4 className="mt-4 text-lg font-semibold text-blue-600">- Alex Johnson</h4>
+                </div>
+              </div>
+              <div className="w-full md:w-1/2 px-4 py-8">
+                <div className="bg-white rounded-lg p-6 shadow-md">
+                  <p className="text-gray-600">
+                    "The feedback was spot on and helped me improve my answers. Highly recommend this service!"
+                  </p>
+                  <h4 className="mt-4 text-lg font-semibold text-blue-600">- Sarah Williams</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-16 bg-white px-6 md:px-0">
+          <Contect />
+        </section>
+      </main>
+
+      <footer className="py-8 bg-black text-white text-center">
+        <p>© 2024 AI Mock Interview. All rights reserved.</p>
+      </footer>
+    </div>
+  )
 }
+
+export default page
